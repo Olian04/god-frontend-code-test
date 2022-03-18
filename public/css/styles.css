@@ -1,4 +1,31 @@
-body {
-  background: steelblue;
-  color: white;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Scroll thumb styles */
+ .no-scrollbar::-webkit-scrollbar {
+   width: 0;
+ }
+ .no-scrollbar::-webkit-scrollbar-thumb {
+   background: transparent; 
+   border-radius: 0;
+ }
+ .no-scrollbar::-webkit-scrollbar-thumb:active {
+   background-color: transparent;
+ }
+ .no-scrollbar::-webkit-scrollbar-thumb:hover {
+   background: transparent; 
+   box-shadow: 0;
+ }
+
+ /* Scroll track styles (Background) */
+ .no-scrollbar::-webkit-scrollbar-track {
+   background: transparent;
+   border-radius: 0;
+ }
+ .no-scrollbar::-webkit-scrollbar-track:hover, 
+ .no-scrollbar::-webkit-scrollbar-track:active {
+   background: transparent;
+ }
 }

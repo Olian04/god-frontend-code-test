@@ -1,13 +1,14 @@
-import { HelloWorld } from "../src/components/HelloWorld";
-import "../public/css/styles.css";
+import "public/css/styles.css";
 import React from "react";
+import type { AppProps } from 'next/app';
 
-function HomePage() {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <React.StrictMode>
-      <HelloWorld />
+      <Component {...pageProps} />
     </React.StrictMode>
-  );
-}
+    );
+};
 
-export default HomePage;
+export default App;
+
