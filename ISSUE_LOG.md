@@ -8,5 +8,5 @@
 
 ## Issue 2
 
-**Issue:** Nextjs was throwing warnings regarding a miss match between server data and client data when using SSR. `Warning: Prop 'className' did not match.`
-**Solution:** Move over to CSR and dynamic import instead of SSR until a solution can be found.
+**Issue:** Nextjs was throwing warnings regarding a miss match between server data and client data when using SSG. `Warning: Prop 'className' did not match.`
+**Solution:** Moved over to SSR instead of SSG.

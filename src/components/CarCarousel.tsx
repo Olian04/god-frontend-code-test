@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
-import { useMediaQuery } from 'react-responsive';
 import { Car } from "src/types/Car";
 import { CarPreview } from "src/components/CarPreview";
 import { ChevronButton } from "src/components/ChevronButton";
 
 interface Props {
   carsData: Car[];
+  isMobile: boolean;
 }
 
 export const DesktopCarCarousel = ({ carsData }: Props) => {
@@ -103,11 +103,7 @@ export const MobileCarCarousel = ({ carsData }: Props) => {
 };
 
 export const CarCarousel = (props: Props)  => {
-  const isMobile = useMediaQuery({
-    query: '(max-width: 1224px)'
-  });
-
-  if (isMobile) {
+  if (props.isMobile) {
     return <MobileCarCarousel {...props} />;
   }
   return <DesktopCarCarousel {...props} />;
